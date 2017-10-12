@@ -85,9 +85,6 @@ sys.io.scheduler=bfq
 # Storage
 ro.sys.sdcardfs=false
 
-# Time Services
-persist.timed.enable=true
-
 # USB
 ro.usb.mtp=0x2e82
 ro.usb.mtp_adb=0x2e76

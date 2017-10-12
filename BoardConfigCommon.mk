@@ -112,6 +112,9 @@ TARGET_RECOVERY_DENSITY := hdpi
 BOARD_HAS_NO_SELECT_BUTTON := true
 HAVE_SELINUX := true
 
+# Time services
+BOARD_USES_QC_TIME_SERVICES := true
+
 # SELinux
 #include device/qcom/sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
