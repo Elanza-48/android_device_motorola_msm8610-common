@@ -182,6 +182,11 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
+# Seccomp
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy \
+    $(COMMON_PATH)/configs/mediaextractor.policy:system/vendor/etc/seccomp_policy/mediaextractor.policy
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
