@@ -90,8 +90,8 @@ PRODUCT_PACKAGES += \
 
 # Audio Configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf
+    $(COMMON_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    $(COMMON_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 960
@@ -129,7 +129,7 @@ PRODUCT_PACKAGES += \
 
 # IPC router config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+    $(COMMON_PATH)/configs/sec_config:system/etc/sec_config
 
 # Keystore
 PRODUCT_PACKAGES +=  \
@@ -138,8 +138,8 @@ PRODUCT_PACKAGES +=  \
 
 # Media Config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+    $(COMMON_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(COMMON_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Motorola
 PRODUCT_PACKAGES += \
@@ -148,8 +148,8 @@ PRODUCT_PACKAGES += \
 
 # Motorola Camera permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/com.motorola.camera.xml:system/etc/permissions/com.motorola.camera.xml \
-    $(LOCAL_PATH)/configs/com.motorola.motosignature.xml:system/etc/permissions/com.motorola.motosignature.xml
+    $(COMMON_PATH)/configs/com.motorola.camera.xml:system/etc/permissions/com.motorola.camera.xml \
+    $(COMMON_PATH)/configs/com.motorola.motosignature.xml:system/etc/permissions/com.motorola.motosignature.xml
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -207,7 +207,7 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+    $(COMMON_PATH)/manifest.xml:system/vendor/manifest.xml
 
 # Filesystem
 PRODUCT_PACKAGES += \
