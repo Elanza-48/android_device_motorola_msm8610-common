@@ -432,19 +432,27 @@ service mmi-boot-sh /system/bin/sh /init.mmi.boot.sh
     user root
     oneshot
 
+service ril-daemon /vendor/bin/hw/rild
+    class main
+    socket rild stream 660 root radio
+    socket rild-debug stream 660 radio system
+    socket cutback stream 660 media radio
+    user root
+    group radio cache inet misc audio sdcard_rw qcom_oncrpc diag log net_raw
+
 service ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
-    user radio
-    group radio cache inet misc audio log readproc wakelock
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    socket rild2 stream 660 root radio
+    socket rild-debug2 stream 660 radio system
+    user root
+    group radio cache inet misc audio sdcard_rw qcom_oncrpc diag log net_raw
     disabled
 
 service rild2-wrapper /system/bin/sh /init.qcom.ril.sh
     class late_start
     user root
     group root
-    oneshot
-
+    
 service mmi-touch-sh /system/bin/sh /init.mmi.touch.sh synaptics aps
     class late_start
     user root
