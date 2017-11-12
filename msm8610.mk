@@ -243,8 +243,10 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    hostapd \
     hostapd.accept \
     hostapd.deny \
+    hostapd_default.conf \
     wpa_supplicant \
     wpa_supplicant_overlay.conf \
     p2p_supplicant_overlay.conf \
@@ -254,7 +256,8 @@ PRODUCT_PACKAGES += \
     wcnss_service \
     libQWiFiSoftApCfg \
     libqsap_sdk \
-    wificond
+    wificond \
+    wifilogd
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
